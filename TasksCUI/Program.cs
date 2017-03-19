@@ -26,7 +26,7 @@ namespace TasksCUI
             Console.WriteLine();
 
             //Task2
-            string firstString = "xyaabbdcccdefww";
+            string firstString = "xyaabBdcccdefww";
             string secondString = "xxxxyyyyabklmopq";
             string thirdString = "abcdefghijklmnopqrstuvwxyz";
            
@@ -38,16 +38,34 @@ namespace TasksCUI
             Console.WriteLine();
 
             //Task3
-            int result = BitOperations.Insertion(8, 15, 0, 0);
-            Console.WriteLine(result);
-            result = BitOperations.Insertion(0, 15, 30, 30);
-            Console.WriteLine(result);
-            result = BitOperations.Insertion(0, 15, 0, 30);
-            Console.WriteLine(result);
-            result = BitOperations.Insertion(15, -15, 0, 4);
-            Console.WriteLine(result);
-            result = BitOperations.Insertion(15, int.MaxValue, 3, 5);
-            Console.WriteLine(result);
+             int result = BitOperations.Insertion(8, 15, 0, 0);
+             Console.WriteLine(result);
+             result = BitOperations.Insertion(0, 15, 30, 30);
+             Console.WriteLine(result);
+             result = BitOperations.Insertion(0, 15, 0, 30);
+             Console.WriteLine(result);
+             result = BitOperations.Insertion(15, -15, 0, 4);
+             Console.WriteLine(result);
+             result = BitOperations.Insertion(15, int.MaxValue, 3, 5);
+             Console.WriteLine(result);
+
+            /*[TestCase(int.MaxValue, int.MaxValue, 3, 5, ExpectedResult = int.MaxValue)]
+            [TestCase(15, int.MaxValue, 3, 5, ExpectedResult = 63)]
+            [TestCase(15, 15, 1, 3, ExpectedResult = 15)]
+            [TestCase(15, 15, 1, 4, ExpectedResult = 31)]
+            [TestCase(15, -15, 0, 4, ExpectedResult = 31)]
+            [TestCase(15, -15, 1, 4, ExpectedResult = 15)]
+            [TestCase(-8, -15, 1, 4, ExpectedResult = -6)]*/
+           
+
+            Console.WriteLine(BitOperations.Insertion(int.MaxValue, int.MaxValue, 3, 5));
+            Console.WriteLine(BitOperations.Insertion(15, int.MaxValue, 3, 5));
+            Console.WriteLine(BitOperations.Insertion(15, 15, 1, 3));
+            Console.WriteLine(BitOperations.Insertion(15, 15, 1, 4));
+            Console.WriteLine(BitOperations.Insertion(15, -15, 0, 4));
+            Console.WriteLine(BitOperations.Insertion(15, -15, 1, 4));
+            Console.WriteLine(BitOperations.Insertion(-8, -15, 1, 4));
+
 
             Console.ReadLine();
 
